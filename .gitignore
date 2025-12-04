@@ -1,0 +1,67 @@
+# -----------------------
+# PHP
+# -----------------------
+/vendor/
+composer.lock
+/.env
+/auth/config.php
+
+# -----------------------
+# Logs & fichiers temporaires
+# -----------------------
+*.log
+*.tmp
+*.cache
+*.bak
+*.swp
+
+# -----------------------
+# Node.js / JS (si tu utilises npm, build tools, etc.)
+# -----------------------
+node_modules/
+dist/
+build/
+
+# -----------------------
+# OS spécifiques
+# -----------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# -----------------------
+# IDE / éditeurs
+# -----------------------
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# -----------------------
+# Assets temporaires
+# -----------------------
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.psd
+*.ai
+*.eps
+
+# -----------------------
+# Base de données locale / export
+# -----------------------
+*.sqlite
+*.db
+
+# -----------------------
+# Autres fichiers à ignorer
+# -----------------------
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
