@@ -207,3 +207,109 @@
             background: var(--deep-purple);
             color: white;
         }
+
+        :root {
+            --pastel-yellow: #fff9e6;
+            --pastel-purple: #f3ebff;
+            --accent-yellow: #ffd966;
+            --accent-purple: #c4a3e8;
+            --deep-purple: #7c5ba6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--pastel-yellow) 0%, var(--pastel-purple) 100%);
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(135deg, var(--pastel-yellow) 0%, var(--pastel-purple) 100%);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--deep-purple) !important;
+        }
+
+        .nav-link {
+            color: #555 !important;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--deep-purple) !important;
+        }
+
+        /* Page Header */
+        .page-header {
+            text-align: center;
+            padding: 4rem 0 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--deep-purple);
+            margin-bottom: 3rem;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: linear-gradient(135deg, #fffbf0 0%, #f8f3ff 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            height: 100%;
+            border: none;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(124, 91, 166, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--deep-purple);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--deep-purple);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-service {
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--accent-purple) 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(124, 91, 166, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-service:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(124, 91, 166, 0.4);
+            color: white;
+        }
+
+        .games-section {
+            padding-bottom: 5rem;
+        }
