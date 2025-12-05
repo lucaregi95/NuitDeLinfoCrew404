@@ -110,6 +110,9 @@ $rep2 = isset($_POST["rep2"]) ? str_replace(",", ".", $_POST["rep2"]) : null;
                     <div class="alert alert-success text-center">
                         Excellent ! Tu as réussi les deux calculs !<br>
                         Ton adresse email n'a pas été vérifiée ! Bonne continuation :)
+                        <form method="post" action="../public/pages/home.html">
+                        <button type="submit" class="btn btn-primary w-50 d-block mx-auto">Valider</button>
+                        </form>
                     </div>
 
                 <?php endif; ?>

@@ -5,7 +5,7 @@ $_SESSION = [];
 
 session_destroy();
 
-header("Location: connexion2.php");
+header("Location: ../../public/connexion2.php");
 exit;
 ?>
 

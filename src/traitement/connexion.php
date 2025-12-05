@@ -25,7 +25,7 @@ else{
     $_SESSION['nom'] = $result["nom"];
     $_SESSION['prenom'] = $result["prenom"];
     $_SESSION['email'] = $result["email"];
-    header('location:../public/bienvenue.php');
+    header('location:../public/pages/home.html');
     ?>
 <!DOCTYPE html>
 

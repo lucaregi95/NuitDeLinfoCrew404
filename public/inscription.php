@@ -1,6 +1,6 @@
 <?php
 $bdd = null;
-require_once('../bdd/connexion.php');
+require_once('../src/bdd/connexion.php');
 
 
 

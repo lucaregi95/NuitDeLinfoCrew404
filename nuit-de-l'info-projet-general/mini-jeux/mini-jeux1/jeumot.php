@@ -106,8 +106,10 @@
 <div id="mots"></div>
 
 <div>
-    <button id="precedent">Précédent</button>
+<form method="post" action="../../../public/pages/Mini-jeux.html">
+    <button id="precedent" type="submit">Précédent</button>
     <button id="recommencer">Recommencer</button>
+</form>
 </div>
 
 <script>

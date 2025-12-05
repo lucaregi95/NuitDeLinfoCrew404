@@ -1,6 +1,6 @@
 <?php
 $bdd = null;
-require_once('../bdd/connexion.php');
+require_once('../src/bdd/connexion.php');
 
 $nom=null;
 $prenom=null;
@@ -28,20 +28,20 @@ if(isset($_GET['erreur'])){
     <title>Connexion - NIRD</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../src/styles/connexion.css">
+    <link rel="stylesheet" href="styles/connexion.css">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="../src/pages/home.html">NIRD</a>
+            <a class="navbar-brand" href="pages/home.html">NIRD</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="../src/pages/home.html">Retour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/home.html">Retour</a></li>
                 </ul>
             </div>
         </div>
@@ -68,7 +68,7 @@ if(isset($_GET['erreur'])){
                 </div>
                 <?php endif; ?>
 
-                <form method="POST" action="../traitement/connexion.php">
+                <form method="POST" action="../src/traitement/connexion.php">
                     <div class="mb-3">
                         <label for="email" class="form-label">
                             <i class="bi bi-envelope me-1"></i> Adresse e-mail

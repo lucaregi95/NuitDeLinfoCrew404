@@ -72,7 +72,7 @@
     <option disabled selected>-- Choisissez votre âge --</option>
 </select>
 //x
-<button href=" " id="validate-btn">Valider</button>
+<a href="../snake/snake.html" id="validate-btn">Valider</a>
 
 <script>
     const select = document.getElementById('age-select');
