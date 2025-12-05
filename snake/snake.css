@@ -1,5 +1,13 @@
+/*:root {
+    --pastel-yellow: #fff9e6;
+    --pastel-purple: #f3ebff;
+    --accent-yellow: #ffd966;
+    --accent-purple: #c4a3e8;
+    --deep-purple: #7c5ba6;
+}*/
+
 body {
-    background: #111;
+    background: #7c5ba6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +22,7 @@ body {
 }
 
 #game {
-    background: black;
+    background: #ffd966;
     display: block;
 }
 
