@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Jeu de mots cachés interactif</title>
+    <title>Jeu de mots cachés interactif</title> //j
     <style>
         :root {
             --pastel-yellow: #fff9e6;
