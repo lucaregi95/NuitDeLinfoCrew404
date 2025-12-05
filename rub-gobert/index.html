@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Vérifiez votre adresse email</title>
+<style>
+:root {
+    --bg: #f6f8fb;
+    --card: #fff;
+    --accent: #2563eb;
+    --muted: #6b7280;
+}
+body {
+    font-family: Inter, system-ui, Roboto, Arial, sans-serif;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.card {
+    background: var(--card);
+    padding: 25px;
+    border-radius: 12px;
+    width: 360px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    text-align: center;
+}
+h1 { margin-top: 0; font-size: 20px; }
+p { margin-bottom: 18px; color: var(--muted); }
+input[type=email] {
+    width: calc(100% - 24px);
+    padding: 10px 12px;
+    border: 1px solid #e6e9ef;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+button {
+    width: 100%;
+    background: var(--accent);
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: left 0.4s ease, top 0.4s ease, background 0.2s;
+}
+button:hover { background: #1e40af; }
+.success { color: green; margin-top: 12px; }
+.error { color: #b91c1c; margin-top: 12px; }
+</style>
+</head>
+<body>
+
+<div class="card">
+<h1>Vérifiez votre adresse email</h1>
+<p>Entrez votre email et cliquez sur <strong>Vérifier</strong>. Un email de confirmation sera envoyé.</p>
+
+<form id="emailForm" method="POST" action="traitement.php">
+    <input id="email" type="email" name="email" placeholder="votre@adresse.com" aria-label="email" required />
+    <button id="verifyBtn" type="submit">Vérifier</button>
+</form>
+
+<div id="message" role="status" aria-live="polite"></div>
+</div>
+
+<script>
+const elEmail = document.getElementById('email');
+const elBtn = document.getElementById('verifyBtn');
+const elMsg = document.getElementById('message');
+const form = document.getElementById('emailForm');
+
+
+function validateEmail(e){ return !!e && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e); }
+function showMessage(text, cls){ elMsg.textContent = text; elMsg.className = cls || ''; }
+
+let moveCount = 0;
+const maxOffsetX = window.innerWidth / 2;
+const maxOffsetY = window.innerHeight / 4;
+
+function moveButtonSmooth() {
+    const x = (Math.random() * 2 - 1) * maxOffsetX;
+    const y = (Math.random() * 2 - 1) * maxOffsetY;
+    elBtn.style.left = x + 'px';
+    elBtn.style.top = y + 'px';
+}
+
+
+function resetButton() {
+    elBtn.style.left = '0px';
+    elBtn.style.top = '0px';
+}
+
+
+elBtn.addEventListener('mouseover', () => {
+    if(!validateEmail(elEmail.value.trim()) && moveCount < 2) {
+        moveButtonSmooth();
+        moveCount++;
+    }
+});
+
+
+form.addEventListener('submit', (e) => {
+    const email = elEmail.value.trim();
+    if(!validateEmail(email)) {
+        e.preventDefault();
+        showMessage('Entrez une adresse email valide.', 'error');
+        if(moveCount < 2) {
+            moveButtonSmooth();
+            moveCount++;
+        }
+    } else {
+        resetButton();
+    }
+});
+</script>
+
+</body>
+</html>

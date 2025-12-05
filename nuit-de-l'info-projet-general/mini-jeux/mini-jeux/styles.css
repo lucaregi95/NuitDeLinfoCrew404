@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
+body {
+    font-family: 'Science Gothic', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 100px auto;
+    padding: 0;
+    background-color: #c4a3e8;
+}
+
+
+#clickBtn {
+    font-family: 'Science Gothic', sans-serif;
+    font-size: 40px;
+    padding: 20px 40px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #7c5ba6;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+
+#message {
+    margin-top: 40px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Le titre */
+#messageTitre {
+    white-space: pre-line;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Le texte */
+#messageTexte {
+    white-space: pre-line;
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+}

@@ -1,1 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Clicker NIDR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<button id="clickBtn">Clique ici !</button>
 
+<div id="message">
+    <p id="messageTitre"></p>
+    <p id="messageTexte"></p>
+</div>
+
+<script>
+    let count = 0;
+
+    const button = document.getElementById('clickBtn');
+
+    messageTitre.textContent = "Règles du Clicker NIRD";
+    messageTexte.textContent =
+        "Bienvenue dans le Clicker NIRD !\n" +
+        "Ton objectif est simple : cliquer pour faire progresser l’établissement dans " +
+        "les différentes étapes du projet NIRD.\n"
+
+    let random = [
+        Math.floor(Math.random() * 10) + 2,
+        Math.floor(Math.random() * 10) + 8,
+        Math.floor(Math.random() * 10) + 13,
+    ].sort((a, b) => a - b);
+
+    let p1 = random[0];
+    let p2 = random[1];
+    let p3 = random[2];
+
+    console.log("Paliers : ", p1, p2, p3);
+
+    button.addEventListener('click', function() {
+        count++;
+        if (count === 1) {
+            messageTexte.textContent =
+                "• Clique sur le bouton pour faire progresser le projet.\n" +
+                "• Chaque clic débloque une étape du projet.";
+        }
+
+        if (count === p1) {
+            document.getElementById("messageTitre").textContent = "Mobilisation";
+            document.getElementById("messageTexte").textContent =
+                "• Un enseignant volontaire devient contact NIRD (auto-désignation). \n " +
+                "• Sensibilise équipe éducative, direction, personnel technique. \n " +
+                "• Mise en réseau via forum Tchap avec autres établissements pilotes. \n" +
+                "• Diffusion supports pédagogiques, information collectivité. \n " +
+                "• Résultat attendu : prise de conscience collective, direction favorable, relais interne constitué. \n ";
+        }
+
+        if (count === p2) {
+            document.getElementById("messageTitre").textContent = "Expérimentation";
+            document.getElementById("messageTexte").textContent =
+                "• Installation postes Linux (neufs ou reconditionnés) en salle informatique. \n " +
+                "• Création club informatique où élèves reconditionnent ordinateurs usagés. \n " +
+                "• Encadrement par enseignant-coordinateur + formations (enseignants, élèves).\n" +
+                "• Suivi retours usage, identification obstacles, documentation. \n" +
+                "• Début implication collectivité (aspects logistiques, réseau). \n" +
+                "• Résultat attendu : expérience concrète documentée, direction impliquée, collectivité progressivement intégrée. \n"
+
+            ;
+        }
+
+        if (count === p3) {
+            document.getElementById("messageTitre").textContent = "Intégration ";
+            document.getElementById("messageTexte").textContent =
+                "• Intégration progressive parc informatique + réseau collectivité.\n" +
+                "• Inscription dans projet d'établissement officiel (validée conseil admin).\n" +
+                "• Coordinateur → référent NIRD reconnu (interlocuteur prioritaire). \n" +
+                "• Direction devient pilote officielle (communication familles, partenaires).\n" +
+                "• Coopération structurée collectivité (maintenance, sécurité, financement pérenne).\n" +
+                "• Résultat attendu : démarche durable, institutionnelle, connectée collectivité.\n"
+
+        }
+
+        if (count === 25) {
+            document.getElementById("messageTitre").textContent ="Bravo ! On espère vous voir rejoindre notre Forum Tchap"
+            document.getElementById("messageTexte").textContent = ""
+        }
+
+    });
+</script>
+</body>
+</html>
