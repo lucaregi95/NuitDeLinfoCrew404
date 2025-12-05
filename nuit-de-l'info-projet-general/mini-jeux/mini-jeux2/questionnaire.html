@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire : Usage numérique</title>
+    <style>
+        :root {
+            --pastel-yellow: #fff9e6;
+            --pastel-purple: #f3ebff;
+            --accent-yellow: #ffd966;
+            --accent-purple: #c4a3e8;
+            --deep-purple: #7c5ba6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--pastel-yellow);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(124, 91, 166, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--deep-purple);
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .question-block {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--pastel-purple);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-purple);
+        }
+
+        .question-block p {
+            font-weight: bold;
+            color: var(--deep-purple);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+            padding-left: 0;
+        }
+
+        .form-check input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            accent-color: var(--deep-purple);
+        }
+
+        .form-check label {
+            cursor: pointer;
+            color: #333;
+            font-size: 16px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .btn-primary {
+            background-color: var(--deep-purple);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            display: block;
+            margin: 30px auto 0;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(124, 91, 166, 0.2);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-purple);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(124, 91, 166, 0.3);
+        }
+
+        #result {
+            margin-top: 30px;
+            padding: 20px;
+            background: var(--pastel-yellow);
+            border: 2px solid var(--accent-yellow);
+            border-radius: 8px;
+            display: none;
+        }
+
+        #result h4 {
+            color: var(--deep-purple);
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .text-success {
+            color: #28a745;
+        }
+
+        .text-danger {
+            color: #dc3545;
+        }
+
+        #result p {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Questionnaire : Usage numérique libre, responsable et écocitoyen</h1>
+
+    <form id="quiz-form">
+
+        <!-- Question 1 -->
+        <div class="question-block">
+            <p>1. Que signifie « La sobriété numérique » ?</p>
+            <div class="form-check">
+                <input type="checkbox" name="q1" value="a" id="q1a">
+                <label for="q1a">Utiliser les appareils numériques uniquement quand c'est nécessaire pour économiser de l'énergie</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q1" value="b" id="q1b">
+                <label for="q1b">Acheter toujours les derniers modèles d'ordinateurs</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q1" value="c" id="q1c">
+                <label for="q1c">Installer tous les logiciels possibles sans réfléchir</label>
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question-block">
+            <p>2. Quels sont les objectifs d'un reconditionnement du matériel ?</p>
+            <div class="form-check">
+                <input type="checkbox" name="q2" value="a" id="q2a">
+                <label for="q2a">Prolonger la durée de vie des ordinateurs et tablettes</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q2" value="b" id="q2b">
+                <label for="q2b">Réduire les déchets électroniques et protéger l'environnement</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q2" value="c" id="q2c">
+                <label for="q2c">Jeter les anciens ordinateurs pour faire de la place</label>
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-block">
+            <p>3. Donne trois exemples de gestes de sobriété numérique mentionnés dans le texte.</p>
+            <div class="form-check">
+                <input type="checkbox" name="q3" value="a" id="q3a">
+                <label for="q3a">Éteindre les appareils quand ils ne sont pas utilisés</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q3" value="b" id="q3b">
+                <label for="q3b">Accumuler le plus de fichiers possible</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q3" value="c" id="q3c">
+                <label for="q3c">Privilégier le partage en ligne plutôt que d'imprimer des documents</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q3" value="d" id="q3d">
+                <label for="q3d">Ne pas stocker ou accumuler des fichiers inutiles</label>
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-block">
+            <p>4. Quels sont les avantages d'utiliser des outils libres et gratuits ?</p>
+            <div class="form-check">
+                <input type="checkbox" name="q4" value="a" id="q4a">
+                <label for="q4a">Permettre aux élèves de collaborer facilement et de partager leurs travaux</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q4" value="b" id="q4b">
+                <label for="q4b">Éviter de dépendre de logiciels payants coûteux</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q4" value="c" id="q4c">
+                <label for="q4c">Interdire aux élèves d'utiliser leurs propres outils</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" name="q4" value="d" id="q4d">
+                <label for="q4d">Favoriser l'apprentissage et l'autonomie grâce à des logiciels accessibles à tous</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-primary" onclick="checkAnswers()">Vérifier mes réponses</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function checkAnswers() {
+        const reponse = {
+            q1: ["a"],
+            q2: ["a","b"],
+            q3: ["a","c","d"],
+            q4: ["a","b","d"]
+        };
+
+        let score = 0;
+        let total = Object.keys(reponse).length;
+        let feedback = "";
+
+        for (let q in reponse) {
+            const checkboxes = document.querySelectorAll(`input[name="${q}"]`);
+            let correct = reponse[q];
+            let selected = [];
+            checkboxes.forEach(cb => {
+                if(cb.checked) selected.push(cb.value);
+            });
+
+            selected.sort();
+            correct.sort();
+            const isCorrect = JSON.stringify(selected) === JSON.stringify(correct);
+
+            if (isCorrect) score++;
+
+            feedback += `<p class="${isCorrect ? "text-success" : "text-danger"}"><strong>${q.toUpperCase()}: ${isCorrect ? "Correct ✅" : "Incorrect ❌"}</strong><br>Bonne(s) réponse(s): ${correct.join(", ")}</p>`;
+        }
+
+        const resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `<h4>Votre score : ${score} / ${total}</h4>` + feedback;
+        resultDiv.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
