@@ -80,7 +80,7 @@ function startGame() {
 
 // Dessin principal
 function draw() {
-    ctx.fillStyle = "#000";
+    ctx.fillStyle = "#ffd966";
     ctx.fillRect(0, 0, 400, 400);
 
     if (!direction) {
