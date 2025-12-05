@@ -1,0 +1,40 @@
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    select {
+        font-size: 16px;
+        position: absolute;
+        transition: top 0.5s ease, left 0.5s ease, transform 0.5s ease, color 0.5s ease;
+    }
+
+    select:hover {
+        transform: rotate(10deg) scale(1.05);
+        color: #ff4500;
+    }
+
+    .flipped {
+        transform: rotate(180deg);
+        display: block;
+    }
+
+    #validate-btn {
+        background-color: #28a745; /* vert “success” */
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        position: absolute; /* pour bouger avec le select */
+        transition: top 0.5s ease, left 0.5s ease, transform 0.3s, background-color 0.3s;
+    }
+
+    #validate-btn:hover {
+        background-color: #218838; /* vert plus foncé au survol */
+        transform: scale(1.05);
+    }
